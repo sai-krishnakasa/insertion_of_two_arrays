@@ -1,0 +1,20 @@
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        n=[]
+        for i in nums1:
+            if i in nums2:
+                n.append(i)
+                nums2.pop(nums2.index(i))
+        return n
+ TESTCASES:
+Your input
+[1,2,2,1]
+[2,2]
+[4,9,5]
+[9,4,9,8,4]
+Output
+[2,2]
+[4,9]
+Expected
+[2,2]
+[4,9]
